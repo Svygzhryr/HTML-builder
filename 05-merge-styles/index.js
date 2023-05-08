@@ -9,7 +9,7 @@ let createBundle = async function() {
     fs.unlink(path.join(__dirname, 'project-dist', 'bundle.css'));
   }
 
-  let files = await fs.readdir(pathName);
+  let files = await fs.readdir(__dirname, 'styles');
 
   for (let file of files) {
   let fileName = file.match(/[^.]*/gi);
